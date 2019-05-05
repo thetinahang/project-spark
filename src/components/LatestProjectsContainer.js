@@ -11,9 +11,9 @@ export default class LatestProjectsContainer extends Component {
   }
 
   componentDidMount() {
-    fetch(URL)
+    fetch('/projects') //need to connect to this
       .then(response => response.json())
-      .then(reviews => this.setState(projects: response.results ))
+      .then(reviews => this.setState({projects: response.results}))
   }
 
   render() {
